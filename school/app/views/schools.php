@@ -30,6 +30,9 @@
 					 		<a href="<?=ROOT?>/schools/delete/<?=$row->id?>">
 					 			<button class="btn-sm btn btn-danger"><i></i>DELETE</button>
 					 		</a>
+							<a href="<?=ROOT?>/move/<?=$row->id?>">
+					 			<button class="btn-sm btn btn-success">Move to<i></i></button>
+					 		</a>
 
 
 					 		
