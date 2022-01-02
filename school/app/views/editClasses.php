@@ -3,7 +3,6 @@
 	
 	<div class="container-fluid p-4 shadow mx-auto" style="max-width: 1000px;">
 		
-
 		<?php if($row):?>
 		<div class="card-group justify-content-center">
  
