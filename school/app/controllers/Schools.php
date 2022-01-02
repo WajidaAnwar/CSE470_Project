@@ -61,6 +61,15 @@ class Schools extends Controller
  		$crumbs[] = ['Dashboard',''];
 		$crumbs[] = ['Schools','schools'];
 		$crumbs[] = ['Add','schools/add'];
+		if(Auth::access('super_admin')){// only super admins can view the add,edit,delete options
+			$this->view('addSchools',[
+				'errors'=>$errors,
+				'crumbs'=>$crumbs,
+				
+			]);
+		}else{
+			$this->view('error');
+		}
 
 
 	}
@@ -97,6 +106,17 @@ class Schools extends Controller
 		$crumbs[] = ['Schools','schools'];
 		$crumbs[] = ['Edit','schools/edit'];
 
+		if(Auth::access('super_admin')){
+
+			$this->view('editSchools',[
+				'row'=>$row,
+				'errors'=>$errors,
+				'crumbs'=>$crumbs,
+			]);
+		}else{
+			$this->view('error');
+		}
+
 
 	}
 
@@ -125,6 +145,14 @@ class Schools extends Controller
  		$crumbs[] = ['Dashboard',''];
 		$crumbs[] = ['Schools','schools'];
 		$crumbs[] = ['Delete','schools/delete'];
+		if(Auth::access('super_admin')){
+			$this->view('deleteSchools',[
+				'row'=>$row,
+	 			'crumbs'=>$crumbs,
+			]);
+		}else{
+			$this->view('error');
+		}
 
 
 	}
