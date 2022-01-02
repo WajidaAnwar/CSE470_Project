@@ -28,7 +28,6 @@ class Profile extends Controller
 
 		$data['row'] = $row;
 		$data['crumbs'] = $crumbs;
-
 		$this->view('profile',$data);
 	}
 }
