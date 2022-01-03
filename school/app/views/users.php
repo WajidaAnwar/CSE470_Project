@@ -26,6 +26,7 @@
 		    </div>
 		  </form>
  			<a href="<?=ROOT?>/signup">
+			<?php if(Auth::access('admin')):?> <?php //only for super admins,admins ?>
 				<button class="btn btn-sm btn-primary"><i></i>Add New</button>
 			</a>
  		</nav>
