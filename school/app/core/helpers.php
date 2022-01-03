@@ -56,6 +56,18 @@ function show($data)
 	print_r($data);
 	echo "</pre>";
 }
+function get_image($image,$gender = 'male')
+{
+	if(!file_exists($image)){
+ 		$image = ASSETS.'/f.jpg';
+ 		if($gender == 'male'){
+ 			$image = ASSETS.'/user_ml.jpg';
+ 		}
+ 	}
+
+ 	return $image;
+}
+
 
 
 function views_path($view)
